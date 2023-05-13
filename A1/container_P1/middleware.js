@@ -18,8 +18,8 @@ const checkIfFileExists = (req, res, next) => {
         return;
       }
       req.jsonObj = {From: "First"};
+      next()
     });
-    next()
   }
  
 };
