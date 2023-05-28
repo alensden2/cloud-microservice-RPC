@@ -1,6 +1,6 @@
 const express = require("express");
 const fs = require("fs");
-const csvParse = require('csv-parse/lib/sync');
+const csvParse = require("csv-parse/lib/sync");
 const app = express();
 
 app.use(express.json());
@@ -8,7 +8,7 @@ app.use(express.json());
 app.post("/calculate", (req, res) => {
   const { file, product } = req.body;
   // logic to reference the file from the a1 folder.
-  const filePath = "../files/"+file;
+  const filePath = "../files/" + file;
 
   // Loading the file to mem
   fs.readFile(filePath, "utf-8", (error, fileContents) => {
@@ -18,6 +18,8 @@ app.post("/calculate", (req, res) => {
 
     try {
       // parsing the file
+      fileContents = fileContents.trim();
+
       const records = csvParse(fileContents, { columns: true });
       //filtering the rows -
       const productRows = records.filter((row) => row.product == product);
