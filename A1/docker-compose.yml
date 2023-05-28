@@ -1,0 +1,23 @@
+services:
+  container1:
+    image: alensden2/alpine-dust-node:patch1
+    ports:
+      - "6000:6000"
+    volumes:
+      - ./:/usr/src/files
+    networks:
+      - mynetwork
+    restart: always
+  container2:
+    image: alensden2/alpine-bunny:patch2.1
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./:/usr/src/files
+    networks:
+      - mynetwork
+    restart: always
+networks:
+  mynetwork:
+    name: mynetwork
+    driver: bridge

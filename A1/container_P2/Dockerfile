@@ -1,7 +1,6 @@
 FROM node:14
 WORKDIR /usr/src/app
-COPY ./ ./
-
+COPY ./ ./ 
 RUN npm install
-EXPOSE 6000
+EXPOSE 5000
 CMD [ "node", "index.js" ]
