@@ -1,6 +1,6 @@
 services:
   container1:
-    image: alensden2/csci-container-1:a1c1test11
+    image: alensden2/csci-container-1:container1f1
     ports:
       - "6000:6000"
     volumes:
@@ -9,7 +9,7 @@ services:
       - mynetwork
     restart: always
   container2:
-    image: alensden2/alpine-bunny:patch2.1
+    image: alensden2/container2:finalc2
     ports:
       - "5000:5000"
     volumes:
