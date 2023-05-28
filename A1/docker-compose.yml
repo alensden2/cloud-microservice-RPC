@@ -1,6 +1,6 @@
 services:
   container1:
-    image: alensden2/alpine-dust-node:patch1
+    image: alensden2/csci-container-1:image10
     ports:
       - "6000:6000"
     volumes:
