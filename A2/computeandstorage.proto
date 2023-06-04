@@ -1,7 +1,8 @@
 syntax = "proto3";
 package computeandstorage;
 service EC2Operations {
-rpc StoreData (StoreRequest) returns (StoreReply) {}rpc AppendData (AppendRequest) returns (AppendReply) {}
+rpc StoreData (StoreRequest) returns (StoreReply) {}
+rpc AppendData (AppendRequest) returns (AppendReply) {}
 rpc DeleteFile (DeleteRequest) returns (DeleteReply) {}
 }
 message StoreRequest {
